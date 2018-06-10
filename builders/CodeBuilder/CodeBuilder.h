@@ -13,10 +13,11 @@ class CodeBuilder
 {
 	Code c;
 public:
+
 	CodeBuilder() : m_code(c) { }
+	//CodeBuilder(const string& className) : m_code(c) { }
 	virtual ~CodeBuilder() {}
 
-	virtual CodeBuilder& createClass(const string& name) = 0;
 	virtual CodeBuilder& addField(const string& type, const string& name) = 0;
 	virtual CodeBuilder& build() = 0;
 	

@@ -3,12 +3,6 @@
 
 using namespace std;
 
-CodeBuilder& CppCodeBuilder::createClass(const string&  name)
-{
-	m_code.m_classname = name;
-	return *this;
-}
-
 CodeBuilder& CppCodeBuilder::addField(const string& type, const string& name)
 {
 	auto p = make_pair(type, name);

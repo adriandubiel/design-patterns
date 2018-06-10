@@ -3,11 +3,13 @@
 class CppCodeBuilder : public CodeBuilder
 {
 public:
-	CppCodeBuilder() {}
+
+	CppCodeBuilder(const string& className) { 
+		m_code.m_classname = className;
+	}
+	
 	~CppCodeBuilder() {}
 	
-	// Inherited via CodeBuilder
-	virtual CodeBuilder& createClass(const string & name) override;
 	virtual CodeBuilder& addField(const string & type, const string & name) override;
 	virtual CodeBuilder& build() override;
 };

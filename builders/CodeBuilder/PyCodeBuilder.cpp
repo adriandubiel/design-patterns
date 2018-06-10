@@ -1,21 +1,5 @@
 #include "PyCodeBuilder.h"
 
-
-PyCodeBuilder::PyCodeBuilder()
-{
-}
-
-
-PyCodeBuilder::~PyCodeBuilder()
-{
-}
-
-CodeBuilder & PyCodeBuilder::createClass(const string & name)
-{
-	m_code.m_classname = name;
-	return *this;
-}
-
 CodeBuilder & PyCodeBuilder::addField(const string & type, const string & name)
 {
 	auto p = make_pair(type, name);

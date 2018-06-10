@@ -6,22 +6,17 @@
 
 void codeBuilder_Test()
 {
-	CppCodeBuilder cppBuilder;
-	PyCodeBuilder pyBuilder;
-
-	Code cpp = cppBuilder
-		.createClass("Person")
+	Code cpp = CppCodeBuilder {"Person"}
 		.addField("string", "name")
 		.addField("int", "age")
 		.build();
 
-	cout << cpp.print() << endl << endl;
-
-	Code py = pyBuilder
-		.createClass("Person")
+	Code py = PyCodeBuilder {"Person"}
 		.addField("string", "name")
 		.addField("int", "age")
 		.build();
 
+	cout << cpp.print() << endl;
+	cout << endl;
 	cout << py.print() << endl;
 }
