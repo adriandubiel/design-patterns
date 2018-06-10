@@ -1,12 +1,12 @@
 # design-patterns
-
 experimenting with design patterns
 
 
-I Builders
+---
+Builders
+---
 
-
-1. CodeBuilder
+1) CodeBuilder
 
 test output:
 
